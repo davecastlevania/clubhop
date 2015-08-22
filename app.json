@@ -1,0 +1,9 @@
+{
+  "name": "ClubHop (Working Title)",
+  "description": "A concert hopping app for iOS & Android",
+  "repository": "https://github.com/castataco/clubhop",
+  "logo": "http://www.debasket.com/public/product_image/157/watermark_logo1978112485.jpg",
+  "keywords": ["ionic", "music", "concerts"],
+  "addons": [],
+  "env": {}
+}
