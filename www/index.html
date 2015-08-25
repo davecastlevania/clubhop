@@ -20,8 +20,12 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+
+    <!-- Controller -->
+    <script src="js/controller.js"></script>
+
   </head>
-  <body ng-app="starter">
+  <body ng-app="clubhop" ng-controller="ClubCtrl">
 
     <ion-pane>
 
@@ -32,109 +36,30 @@
       </ion-header-bar>
 
       <ion-content>
-        <center><h5>Welcome to Paris! Today&apos;s Packages...</h5></center>
+      <div class="container">
 
-        <div class="card events">
+        <center><h4>Welcome to {{ city }}</h4></center>
+
+        <div class="card events" ng-repeat="event in events">
           <div class="item item-divider">
-            SPECIAL: 5 Clubs + VIP Service
+            <h2>{{ event.name }}</h2>
           </div>
-            <img src="/img/concert4.png" width="100%">
+            <img ng-src="{{ event.img }}" width="100%">
           <div class="row event-foot">
             <div class="col col-75">
               <p class="description">
-                Includes 2 Free Drinks
+                {{ event.headline }}
               </p>
             </div>
             <div class="col">
-              <button class="button button-assertive">
-              &#x20AC;65
+              <button class="button button-assertive price">
+              {{ event.price | currency }}
               </button>
             </div>
           </div>
         </div>
 
-        <div class="card">
-          <div class="item item-divider">
-            Music And Art Fest Package
-          </div>
-            <img src="/img/concert2.png" width="100%">
-            <div class="row event-foot">
-              <div class="col col-75">
-                <p class="description">
-                  VIP + Food Tokens
-                </p>
-              </div>
-              <div class="col">
-                <button class="button button-assertive">
-                &#x20AC;150
-                </button>
-              </div>
-            </div>
-          </div>
-        
-
-
-        <div class="card">
-          <div class="item item-divider">
-            SuperArena Experience
-          </div>
-            <img src="/img/concert3.png" width="100%">
-            <div class="row event-foot">
-              <div class="col col-75">
-                <p class="description">
-                  Includes 3 Aftershows
-                </p>
-              </div>
-              <div class="col">
-                <button class="button button-assertive">
-                &#x20AC;80
-                </button>
-              </div>
-            </div>
-          </div>
-        
-
-
-        <div class="card">
-          <div class="item item-divider">
-            Daft Punk Experience
-          </div>
-            <img src="/img/concert1.png" width="100%">
-            <div class="row event-foot">
-              <div class="col col-75">
-                <p class="description">
-                  Includes 2 Aftershows
-                </p>
-              </div>
-              <div class="col">
-                <button class="button button-assertive">
-                &#x20AC;65
-                </button>
-              </div>
-            </div>
-          </div>
-        
-
-        <div class="card">
-          <div class="item item-divider">
-            City Hop Experience
-          </div>
-            <img src="/img/concert5.png" width="100%">
-            <div class="row event-foot">
-              <div class="col col-75">
-                <p class="description">
-                  Includes 5 Events
-                </p>
-              </div>
-              <div class="col">
-                <button class="button button-assertive">
-                &#x20AC;40
-                </button>
-              </div>
-            </div>
-          </div>
-        
-
+      </div>
 
       </ion-content>
 
