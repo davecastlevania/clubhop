@@ -1,0 +1,16 @@
+<div class="item item-divider">
+  <h2>{{ info.name }}</h2>
+</div>
+  <img ng-src="{{ info.img }}" width="100%">
+<div class="row event-foot">
+  <div class="col col-75">
+    <p class="description">
+      {{ info.headline }}
+    </p>
+  </div>
+  <div class="col">
+    <button class="button button-assertive price">
+    {{ info.price | currency }}
+    </button>
+  </div>
+</div>
