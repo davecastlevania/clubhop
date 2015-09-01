@@ -1,0 +1,14 @@
+<ion-header-bar class="bar-dark">
+      <h1 class="title">ClubHop</h1>
+</ion-header-bar>
+
+<ion-content>
+
+    <div class="container">
+      <center><h4>Welcome to {{ city }}</h4></center>
+        <div class="card events" ng-repeat="deal in deals">
+          <deal-info info="deal"></deal-info>
+        </div>
+    </div>
+
+</ion-content>

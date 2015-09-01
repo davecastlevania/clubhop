@@ -5,6 +5,43 @@
 // the 2nd parameter is an array of 'requires'
 var app = angular.module('clubhop', ['ionic'])
 
+app.config(function($stateProvider, $urlRouterProvider) {
+  $urlRouterProvider.otherwise('/')
+
+  $stateProvider.state('home', {
+    url: '/home',
+    views: {
+      home: {
+        templateUrl: 'templates/home.html',
+        controller: 'ClubCtrl'
+      }
+    }
+  })
+
+  $stateProvider.state('types', {
+    url: '/types',
+    views: {
+      types: {
+        templateUrl: 'templates/types.html'
+      }
+    }
+  })
+
+  $stateProvider.state('settings', {
+    url: '/settings',
+    views: {
+      settings: {
+        templateUrl: 'templates/settings.html'
+      }
+    }
+  })
+
+
+
+})
+
+
+
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard

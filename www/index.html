@@ -28,25 +28,28 @@
 
   </head>
 
-  <body ng-app="clubhop" ng-controller="ClubCtrl">
+  <body ng-app="clubhop">
 
-    <ion-pane>
+    <ion-nav-view>
 
-      <ion-header-bar class="bar-dark">
-        <button class="button icon ion-navicon"></button>
-        <h1 class="title">ClubHop</h1>
-        <button class="button">Account</button>
-      </ion-header-bar>
 
-      <ion-content>
-        <div class="container">
-          <center><h4>Welcome to {{ city }}</h4></center>
-            <div class="card events" ng-repeat="deal in deals">
-              <deal-info info="deal"></deal-info>
-            </div>
-        </div>
-        
-      </ion-content>
-    </ion-pane>
+    <ion-tabs class="tabs-dark">
+
+          <ion-tab icon="ion-ios-list-outline" ui-sref="home">
+            <ion-nav-view name="home"></ion-nav-view>
+          </ion-tab>
+
+          <ion-tab icon="ion-ios-location-outline" ui-sref="types">
+            <ion-nav-view name="types"></ion-nav-view>
+          </ion-tab>
+
+          <ion-tab icon="ion-ios-cog-outline" ui-sref="settings">
+            <ion-nav-view name="settings"></ion-nav-view>
+          </ion-tab>
+
+    </ion-tabs>
+
+    </ion-nav-view>
+
   </body>
 </html>
