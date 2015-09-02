@@ -30,26 +30,63 @@
 
   <body ng-app="clubhop">
 
-    <ion-nav-view>
+    <ion-side-menus>
+
+    <ion-side-menu-content>
+      <ion-nav-view>
+
+          <ion-tabs class="tabs-dark">
+
+            <ion-tab icon="ion-ios-list-outline" ui-sref="home">
+              <ion-nav-view name="home"></ion-nav-view>
+            </ion-tab>
+
+            <ion-tab icon="ion-ios-location-outline" ui-sref="types">
+              <ion-nav-view name="types"></ion-nav-view>
+            </ion-tab>
 
 
-    <ion-tabs class="tabs-dark">
+          </ion-tabs>
 
-          <ion-tab icon="ion-ios-list-outline" ui-sref="home">
-            <ion-nav-view name="home"></ion-nav-view>
-          </ion-tab>
+      </ion-nav-view>
 
-          <ion-tab icon="ion-ios-location-outline" ui-sref="types">
-            <ion-nav-view name="types"></ion-nav-view>
-          </ion-tab>
+    </ion-side-menu-content>
 
-          <ion-tab icon="ion-ios-cog-outline" ui-sref="settings">
-            <ion-nav-view name="settings"></ion-nav-view>
-          </ion-tab>
+    <ion-side-menu side="left">
+      <header class="bar bar-header bar-stable">
+          <h1 class="title">Settings</h1>
+      </header>
 
-    </ion-tabs>
+     <ion-content class="has-header">
+      <ion-list>
+        <list-item>1</list-item>
+      </ion-list>
 
-    </ion-nav-view>
+      <ion-list>
+        <list-item>1</list-item>
+      </ion-list>
+
+      <ion-list>
+        <list-item>1</list-item>
+      </ion-list>
+
+      <ion-list>
+        <list-item>1</list-item>
+      </ion-list>
+
+      <ion-list>
+        <list-item>1</list-item>
+      </ion-list>
+    </ion-content>
+
+    </ion-side-menu>
+
+
+  </ion-side-menus>
+
+
+
+
 
   </body>
 </html>
