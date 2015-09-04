@@ -2,21 +2,21 @@
 ClubHop (Working Name) is a packaged concert ticketing experience built using the Ionic Framework for iOS &amp; Android.
 
 Current Version: 0.1
-- Is still very pre-alpha. 
+- Is still very pre-alpha.
 - No current functionality still in prototyping stage
 
-Current Demo: https://gentle-stream-1422.herokuapp.com 
+Current Demo: https://gentle-stream-1422.herokuapp.com
 
-Please note: Best viewed in your favorite browser in responsive mode. 
+Please note: Best viewed in on a phone's mobile browser or your favorite desktop browser with developer tools and responsive mode.
 
 # Testing
-Feel free to clone this project for your own testing purposes and to keep track of any changes. 
+Feel free to clone this project for your own testing purposes and to keep track of any changes.
 
-## Requirements 
+## Requirements
 - [Node.JS](https://nodejs.org/en/)
-- [Ionic CL Tools](http://ionicframework.com/getting-started/) 
-- [Cordova CL Tools](https://cordova.apache.org/docs/en/4.0.0/guide_cli_index.md.html) 
-- Android and/or iOS Dependencies 
+- [Ionic CL Tools](http://ionicframework.com/getting-started/)
+- [Cordova CL Tools](https://cordova.apache.org/docs/en/4.0.0/guide_cli_index.md.html)
+- Android and/or iOS Dependencies
 
 ## How To Run
 Once the required dependencies are installed using command line you can cd into the app directory and do either one of the follow
@@ -37,10 +37,5 @@ Once the required dependencies are installed using command line you can cd into 
 	Type "ionic build android" in the terminal
 	Type "ionic emulate android" in the terminal
 
-### Other Options 
+### Other Options
 [See this for more testing options](http://ionicframework.com/docs/guide/testing.html)
-
-
-
-
-
