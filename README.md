@@ -22,20 +22,20 @@ Feel free to clone this project for your own testing purposes and to keep track 
 Once the required dependencies are installed using command line you can cd into the app directory and do either one of the follow
 
 ### Viewing through local web browswer
-> CD into the directory
-> Type "ionic serve" in the terminal
-> A local website should pop up in 'localhost:8100'
+				CD into the directory
+				Type "ionic serve" in the terminal
+				A local website should pop up in 'localhost:8100'
 
 ### Viewing through iOS emulator (Must have XCode)
-> CD into the directory
-> Type "ionic platform add ios" in the terminal
-> Type "ionic build ios" in the terminal
-> Type "ionic emulate ios" in the terminal
+				CD into the directory
+				Type "ionic platform add ios" in the terminal
+				Type "ionic build ios" in the terminal
+				Type "ionic emulate ios" in the terminal
 
 ### Viewing through Android emulator (Must have Android SDK)
-> Type "ionic platform add ios" in the terminal
-> Type "ionic build android" in the terminal
-> Type "ionic emulate android" in the terminal
+				Type "ionic platform add ios" in the terminal
+				Type "ionic build android" in the terminal
+				Type "ionic emulate android" in the terminal
 
 ### Other Options 
 [See this for more testing options](http://ionicframework.com/docs/guide/testing.html)
