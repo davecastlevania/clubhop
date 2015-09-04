@@ -1,5 +1,90 @@
+<!--TO DO
+  - Make Profile Pic Clickable for Pop Up to Upload New Photo
+  - Link Social Media w/ OAuth or API Calls
+  - Make Edit Button pop up edit contact form
+  - Make Controller for Profile_Img, Street, City, State, Country, PostalCode, E-Mail
+  - Make Social Service or Controllers
+  - Add Edit Account Routes
+    - Add Subroutes with verify
+    - Add subroutes with reset password
+    - Add pop over on click profile_image change photos
+  !-->
+
 <ion-view view-title="Settings">
 <ion-content>
-  <h1>This is the settings section for events or another page of things.</h1>
+  <div class="row">
+    <div class="col col-50 col-offset-25 profile">
+          <img width="60%" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/female-circle-512.png">
+          <h4 class="profile_name">Ana Smith</h5>
+          <a class="positive" href="#">Edit Account</a>
+    </div>
+  </div>
+  <div class="list">
+
+    <div class="item item-divider">
+      <h3>Personal Info</h3>
+    </div>
+
+    <ul class="list">
+
+      <li class="item item-icon-left" href="#">
+        <i class="icon ion-home"></i>
+          Home
+          <p>123 Fake Street</p>
+          <p>Paris, France 75008</p>
+      </li>
+      <li class="item item-icon-left" href="#">
+        <i class="icon ion-email"></i>
+          E-Mail
+          <p>AnaSmith22@gmail.com</p>
+      </li>
+      <li class="item item-icon-left" href="#">
+        <i class="icon ion-card"></i>
+          Payment Method
+          <p>MasterCard: **** 1234</p>
+      </li>
+
+    </ul>
+
+    <div class="item item-divider">
+      <h3>Social Networks</h3>
+    </div>
+      <ul class="list">
+
+      <li class="item item-icon-left item-toggle" href="#">
+        <i class="icon ion-social-facebook-outline"></i>
+          Facebook
+        <label class="toggle toggle-dark">
+          <input type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+
+      <li class="item item-icon-left item-toggle" href="#">
+        <i class="icon ion-social-twitter-outline"></i>
+          Twitter
+        <label class="toggle toggle-dark">
+          <input type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+
+      <li class="item item-icon-left item-toggle" href="#">
+        <i class="icon ion-social-instagram-outline"></i>
+          Instagram
+        <label class="toggle toggle-dark">
+          <input type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+    </ul>
+  </div>
+
 </ion-content>
 </ion-view>

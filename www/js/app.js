@@ -18,6 +18,15 @@ var app = angular.module('clubhop', ['ionic', 'clubhop.controllers'])
   });
 })
 
+// View states
+//   To Do:
+//    - Get Subviews in Deal Card
+//    - Get Subviews in Settings (See Settings.html To Do List)
+//      - Edit Account state
+//      - Edit Personal Info, E-Mail, Payment Method State
+//      - Add Pop Over Social Media Integration
+//    - Decided on Watching / Your Venues Feature (Sepearate or Merge)
+
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
@@ -60,11 +69,11 @@ var app = angular.module('clubhop', ['ionic', 'clubhop.controllers'])
         }
       }
     })
-    .state('home.favs', {
-      url: '/favs',
+    .state('home.venues', {
+      url: '/venues',
       views: {
         'menuContent': {
-          templateUrl: 'templates/favs.html',
+          templateUrl: 'templates/venues.html',
         }
       }
     })
@@ -84,11 +93,19 @@ var app = angular.module('clubhop', ['ionic', 'clubhop.controllers'])
         }
       }
     })
-    .state('home.security', {
-      url: '/security',
+    .state('home.settings', {
+      url: '/settings',
       views: {
         'menuContent': {
-          templateUrl: 'templates/security.html',
+          templateUrl: 'templates/settings.html',
+        }
+      }
+    })
+    .state('home.watching', {
+      url: '/watching',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/watching.html',
         }
       }
     })
