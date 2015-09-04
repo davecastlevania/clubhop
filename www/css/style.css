@@ -20,3 +20,16 @@ p.description {
 .profile {
   text-align: center;
 }
+
+button.button-full.button-stable.no_top {
+  margin-top: 0px;
+}
+
+.no_to {
+  margin-top: 0px;
+}
+
+h4.profile_name {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}

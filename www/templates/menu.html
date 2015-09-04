@@ -22,7 +22,7 @@
       <h1 class="title">Settings</h1>
   </header>
   <!--Account Avatar -->
-    <ion-content class="has-header">
+  <ion-content class="has-header">
       <div class="row">
         <div class="col col-50 col-offset-25 profile">
               <img width="100%" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/female-circle-512.png">
@@ -30,37 +30,48 @@
         </div>
       </div>
   <!--Menu List -->
-
-      <ion-list>
-      <ion-item menu-close href="#/home">
-        Home
-      </ion-item>
-      <ion-item menu-close href="#/home/account">
-        Account
-      </ion-item>
-      <ion-item menu-close href="#/home/favs">
-        Favorites
-      </ion-item>
-      <ion-item menu-close href="#/home/payment">
-        Payment Methods
-      </ion-item>
-      <ion-item menu-close href="#/home/invite">
-        Invite Friends
-      </ion-item>
-      <ion-item menu-close href="#/home/contact">
-        Contact Support
-      </ion-item>
-      <ion-item menu-close href="#/home/security">
-        Security
-      </ion-item>
-      <ion-item menu-close href="#/home/about">
-        About
-      </ion-item>
-
-
-
+    <ion-list>
+      <div class="list">
+        <a menu-close class="item item-icon-left" href="#/home">
+          <i class="icon ion-pricetags"></i>
+          ClubHop Deals
+        </a>
+        <a menu-close class="item item-icon-left" href="#/home/account">
+          <i class="icon ion-ios-person"></i>
+          Account
+        </a>
+        <a menu-close class="item item-icon-left" href="#/home/watching">
+          <i class="icon ion-ios-eye"></i>
+          Watching
+        </a>
+        <a menu-close class="item item-icon-left" href="#/home/favs">
+          <i class="icon ion-music-note"></i>
+          Your Venues
+        </a>
+        <a menu-close class="item item-icon-left" href="#/home/payment">
+          <i class="icon ion-card"></i>
+          Payment Methods
+        </a>
+        <a menu-close class="item item-icon-left" href="#/home/invite">
+          <i class="icon ion-paper-airplane"></i>
+          Invite Friends
+          <p>Earn $5 HopCash</p>
+        </a>
+        <a menu-close class="item item-icon-left" href="#/home/contact">
+          <i class="icon ion-email"></i>
+          Contact Support
+        </a>
+        <a menu-close class="item item-icon-left" href="#/home/security">
+          <i class="icon ion-ios-unlocked-outline"></i>
+          Security
+        </a>
+        <a menu-close class="item item-icon-left" href="#/home/about">
+          <i class="icon ion-home"></i>
+          About
+        </a>
+      </div>
     </ion-list>
-    </ion-content>
+  </ion-content>
 
 </ion-side-menu>
 </ion-side-menus>
