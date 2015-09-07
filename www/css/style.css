@@ -33,3 +33,50 @@ h4.profile_name {
   margin-bottom: 0px;
   margin-top: 0px;
 }
+
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+   appearance: none;
+
+  width: 90%;
+  height: 20px;
+  margin-top: 0px;
+}
+
+
+.inline-block {
+    display: inline-block;
+}
+
+.align-center {
+  text-align: center;
+}
+
+/* Progress Styles */
+
+div.progress .col{
+  text-align: center;
+  margin-top: -20px;
+}
+
+
+.reserved {
+  margin-right: 20px;
+}
+
+.spots {
+  margin-right: 20px;
+}
+
+.time_left {
+  margin-right: 0;
+}
+
+.stats_sub {
+  margin-top: -10px;
+}
+
+strong.block.h4 {
+  margin-bottom: 0px;
+}

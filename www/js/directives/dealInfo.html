@@ -1,16 +1,36 @@
 <div class="item item-divider">
   <h2>{{ info.name }}</h2>
 </div>
+
+<a href="#/home/deals/{{deals.id}}">
+
   <img ng-src="{{ info.img }}" width="100%">
-<div class="row event-foot">
-  <div class="col col-75">
-    <p class="description">
-      {{ info.headline }}
-    </p>
+
+</a>
+
+  <div class="row event-foot">
+  <progress max="100" value="{{ info.reserved | percentage_bar: 0 }}"></progress>
   </div>
-  <div class="col">
-    <a class="button button-assertive price">
-    {{ info.price | currency }}
-    </a>
+  <div class="row progress">
+    <div class="col">
+      <ul class="deal-stats">
+          <li class="reserved inline-block align-center">
+              <strong class="block h4">{{ info.reserved | percentage: 0 }}</strong>
+              <span class="dark stats_sub">reserved</span>
+          </li>
+          <li class="spots inline-block align-center">
+              <strong class="block h4">{{ info.remain }}</strong>
+              <span class="dark stats_sub">spots left</span>
+          </li>
+          <li class="time_left inline-block align-center">
+              <strong class="block">
+              <div class="num h4">{{ info.ending }}</div>
+              </strong>
+              <div class="span text dark stats_sub">hours left</div>
+          </li>
+          <li class="time_left inline-block align-center">
+           </li>
+
+    </div>
   </div>
 </div>

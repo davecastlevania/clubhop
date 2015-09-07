@@ -51,51 +51,42 @@ angular.module('clubhop.controllers', [])
 // To Do - Get a database that can spit out JSON File and insert $HTTP request for City Data based on location
 
   $scope.city = 'Paris\, France',
+
+// Notes - Not sure how I will get reserved percentage to update with server info. This part of the controller is a webkit-appearance. Also have to get spots and ending to update with a server in production mode.
+
   $scope.deals = [
     {
-      name: 'Daft Punk Package',
+      name: 'Package 1 (Includes 3 Events)',
       headline: 'Do not Miss Out',
       price: '65',
       remain: '5',
       date: new Date('2015', '11', '08'),
       start: 'time',
-      img: 'img/concert1.png'
+      img: 'img/concert1.png',
+      ending: '12',
+      reserved: '.80'
     },
     {
-      name: 'Hop 10 Night Clubs',
+      name: 'Package 2 (Includes 2 Events)',
       headline: 'Do not Miss Out',
-      price: '100',
+      price: '20',
       remain: '20',
-      date: new Date('2015', '9', '12'),
+      date: new Date('2015', '11', '08'),
       start: 'time',
-      img: 'img/concert2.png'
+      img: 'img/concert2.png',
+      ending: '6',
+      reserved: '.5'
     },
     {
-      name: 'Rap Package',
+      name: 'Package 3 (Includes 5 Events)',
       headline: 'Do not Miss Out',
-      price: '40',
-      remain: '5',
+      price: '65',
+      remain: '50',
       date: new Date('2015', '11', '08'),
       start: 'time',
-      img: 'img/concert4.png'
-    },
-    {
-      name: '5 Venue Deal',
-      headline: 'Do not Miss Out',
-      price: '40',
-      remain: '5',
-      date: new Date('2015', '11', '08'),
-      start: 'time',
-      img: 'img/concert5.png'
-    },
-    {
-      name: 'Swag',
-      headline: 'Swag',
-      price: '40',
-      remain: '5',
-      date: new Date('2015', '11', '08'),
-      start: 'time',
-      img: 'img/concert5.png'
+      img: 'img/concert3.png',
+      ending: '48',
+      reserved: '.1'
     }
   ]
 })

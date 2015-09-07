@@ -18,6 +18,22 @@ var app = angular.module('clubhop', ['ionic', 'clubhop.controllers'])
   });
 })
 
+// Filter for Stats Percentage Bar
+
+.filter('percentage', ['$filter', function ($filter) {
+  return function (input, decimals) {
+    return $filter('number')(input * 100, decimals) + '%';
+  };
+}])
+
+.filter('percentage_bar', ['$filter', function ($filter) {
+  return function (input, decimals) {
+    return $filter('number')(input * 100, decimals);
+  };
+}])
+
+
+
 // View states
 //   To Do:
 //    - Get Subviews in Deal Card
@@ -45,6 +61,14 @@ var app = angular.module('clubhop', ['ionic', 'clubhop.controllers'])
         }
       }
     })
+    .state('home.dealpage', {
+      url: "/deals/:dealsId",
+      views: {
+        'menuContent' :{
+          templateUrl: 'templates/dealpage.html'
+        }
+      }
+    })
     .state('home.account', {
       url: '/account',
       views: {
@@ -61,14 +85,80 @@ var app = angular.module('clubhop', ['ionic', 'clubhop.controllers'])
         }
       }
     })
+
+    // Contact Sub-Pages
+
+
     .state('home.contact', {
       url: '/contact',
       views: {
         'menuContent': {
-          templateUrl: 'templates/contact.html',
+          templateUrl: 'templates/contact/contact.html',
         }
       }
     })
+
+    .state('home.contact_redeem', {
+      url: '/contact/redeem',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/contact/redeem.html',
+        }
+      }
+    })
+    .state('home.contact_purchase', {
+      url: '/contact/purchase',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/contact/purchase.html',
+        }
+      }
+    })
+    .state('home.contact_manage', {
+      url: '/contact/manage',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/contact/manage.html',
+        }
+      }
+    })
+    .state('home.contact_venue', {
+      url: '/contact/venue',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/contact/venue.html',
+        }
+      }
+    })
+    .state('home.contact_general', {
+      url: '/contact/general',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/contact/general.html',
+        }
+      }
+    })
+
+    .state('home.contact_sms', {
+      url: '/contact/sms',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/contact/sms.html',
+        }
+      }
+    })
+
+    .state('home.contact_email', {
+      url: '/contact/email',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/contact/email.html',
+        }
+      }
+    })
+
+// Other working sections
+
     .state('home.venues', {
       url: '/venues',
       views: {
