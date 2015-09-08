@@ -2,11 +2,8 @@
   <h2>{{ info.name }}</h2>
 </div>
 
-<a href="#/home/deals/{{deals.id}}">
 
   <img ng-src="{{ info.img }}" width="100%">
-
-</a>
 
   <div class="row event-foot">
   <progress max="100" value="{{ info.reserved | percentage_bar: 0 }}"></progress>

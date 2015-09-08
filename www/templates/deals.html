@@ -4,9 +4,11 @@
 
     <div class="container">
       <center><h4>Welcome to {{ city }}</h4></center>
-        <div class="events" ng-repeat="deal in deals">
-          <deal-info info="deal"></deal-info>
-        </div>
+      <ion-list class="list">
+        <ion-div class="events" ng-repeat="deal in deals">
+          <deal-info info="deal" ui-sref="home.deal({deal:id})"></deal-info>
+        </ion-item>
+      </ion-list>
     </div>
 
 </ion-content>

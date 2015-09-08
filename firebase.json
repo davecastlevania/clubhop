@@ -1,0 +1,9 @@
+{
+  "firebase": "clubhop-alpha-01",
+  "public": "www",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

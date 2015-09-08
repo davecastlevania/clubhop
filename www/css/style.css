@@ -44,6 +44,9 @@ progress[value] {
   margin-top: 0px;
 }
 
+a.events {
+  text-decoration: none;
+}
 
 .inline-block {
     display: inline-block;

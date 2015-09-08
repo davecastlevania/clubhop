@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var app = angular.module('clubhop', ['ionic', 'clubhop.controllers'])
+var app = angular.module('clubhop', ['ionic', 'clubhop.controllers', 'firebase'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -50,25 +50,28 @@ var app = angular.module('clubhop', ['ionic', 'clubhop.controllers'])
     url: '/home',
     abstract: true,
     templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
   })
+
     .state('home.deals', {
       url: '/deals',
       views: {
         'menuContent': {
           templateUrl: 'templates/deals.html',
-          controller: 'ClubCtrl'
-        }
-      }
-    })
-    .state('home.dealpage', {
-      url: "/deals/:dealsId",
+          controller: 'ClubCtrl',
+      }}})
+
+    .state('home.deal', {
+      url: '/deals/:id',
       views: {
-        'menuContent' :{
-          templateUrl: 'templates/dealpage.html'
-        }
-      }
-    })
+        'menuContent': {
+          templateUrl: 'templates/dealpage.html',
+          controller: 'DealCtrl',
+          resolve: {
+              deal: function($stateParams, DealsService) {
+              return DealsService.getDeal($stateParams.deal)
+              }}
+        }}
+      })
     .state('home.account', {
       url: '/account',
       views: {
@@ -198,9 +201,7 @@ var app = angular.module('clubhop', ['ionic', 'clubhop.controllers'])
           templateUrl: 'templates/watching.html',
         }
       }
-    })
-
-    ;
+    });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/home/deals');
 });
