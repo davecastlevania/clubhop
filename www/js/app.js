@@ -61,17 +61,13 @@ var app = angular.module('clubhop', ['ionic', 'clubhop.controllers', 'firebase']
       }}})
 
     .state('home.deal', {
-      url: '/deals/:id',
+      url: '/deals/:dealid',
       views: {
         'menuContent': {
           templateUrl: 'templates/dealpage.html',
-          controller: 'DealCtrl',
-          resolve: {
-              deal: function($stateParams, DealsService) {
-              return DealsService.getDeal($stateParams.deal)
-              }}
-        }}
-      })
+          controller: 'DealCtrl'
+        }}})
+
     .state('home.account', {
       url: '/account',
       views: {
